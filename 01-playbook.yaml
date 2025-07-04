@@ -1,20 +1,19 @@
 
-   - name: play1
-     hosts: all
-     tasks:
+- name: play1
+  hosts: all
+  tasks:
+  - name: Task of play1
+    ansible.builtin.debug:
+      msg: "Hello world"
 
-     - name: Task of play1
-       ansible.builtin.debug:
-        msg: "Hello world"
+  - name: Task2 of play1
+    ansible.builtin.ping:
 
-     - name: Task2 of play1
-       ansible.builtin.ping:
-
-   -  name: Play2
-      hosts: prd
-      tasks: 
-      - name: taks1 of play2
-        ansible.bultin.debug:
+  - name: Play2
+    hosts: prd
+    tasks: 
+    - name: taks1 of Play2
+      ansible.bultin.debug:
         msg: "Hi this is prd"
 
         
