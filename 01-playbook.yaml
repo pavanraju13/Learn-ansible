@@ -19,5 +19,13 @@
       ansible.builtin.shell:
         cmd: df -h
 
+- name: Play3
+  hosts: dev
+  tasks: 
+  - name: task1 of Play3
+    ansible.builtin.get_url:
+    url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
+    dest: /home/ec2-user/      
+
         
 
