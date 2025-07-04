@@ -14,7 +14,10 @@
    tasks: 
     - name: taks1 of Play2
       ansible.builtin.debug:
-        msg: "Hi this is prd"
+        msg: "Hi this is prod"
+    - name: task2 of Play2
+      ansible.builtin.shell:
+       cmd: df -h
 
         
 
