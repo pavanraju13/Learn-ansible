@@ -10,7 +10,7 @@
     ansible.builtin.ping:
 
 -  name: Play2
-   hosts: prd
+   hosts: prod
    tasks: 
     - name: taks1 of Play2
       ansible.builtin.debug:
