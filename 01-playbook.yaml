@@ -2,11 +2,13 @@
    - name: play1
      hosts: all
      tasks:
+     
      - name: Task of play1
        ansible.builtin.debug:
         msg: "Hello world"
-     - name: Task of play2
+
+     - name: Task2 of play1
        ansible.builtin.ping:
-        ping: pong
+        
         
 
