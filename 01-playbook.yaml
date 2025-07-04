@@ -1,8 +1,8 @@
 
-   -name:play1
-    hostname:all
-    tasks:
-        -name:print the content
-         ansible.builtin.debug    #To print by using debug module
-          msg:"Hello world"
+   - name: play1
+  hosts: all
+  tasks:
+    - name: print the content
+      ansible.builtin.debug:
+        msg: "Hello world"
 
