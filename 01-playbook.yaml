@@ -13,7 +13,7 @@
    hosts: prd
    tasks: 
     - name: taks1 of Play2
-      ansible.bultin.debug:
+      ansible.builtin.debug:
         msg: "Hi this is prd"
 
         
