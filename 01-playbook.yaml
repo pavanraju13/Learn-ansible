@@ -7,5 +7,6 @@
         msg: "Hello world"
      - name: Task of play2
        ansible.builtin.ping:
+        ping: pong
         
 
