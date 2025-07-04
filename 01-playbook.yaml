@@ -2,7 +2,7 @@
    - name: play1
      hosts: all
      tasks:
-    - name: print the content
-      ansible.builtin.debug:
+     - name: print the content
+       ansible.builtin.debug:
         msg: "Hello world"
 
