@@ -9,9 +9,11 @@
 
      - name: Task2 of play1
        ansible.builtin.ping:
-        
-     - name: task3 of play1
-       hosts: dev
+
+   -  name: Play2
+      hosts: prd
+      tasks: 
+       -name: taks1 of play2
        ansible.bultin.debug:
        msg: "Hi this is prd"
 
