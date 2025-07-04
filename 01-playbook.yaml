@@ -16,7 +16,6 @@
       ansible.builtin.debug:
         msg: "Hi this is prod"
     - name: task2 of Play2
-      hosts: dev
       ansible.builtin.shell:
        cmd: df -h
 
