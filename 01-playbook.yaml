@@ -13,9 +13,9 @@
    -  name: Play2
       hosts: prd
       tasks: 
-       -name: taks1 of play2
-       ansible.bultin.debug:
-       msg: "Hi this is prd"
+      - name: taks1 of play2
+        ansible.bultin.debug:
+        msg: "Hi this is prd"
 
         
 
