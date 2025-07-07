@@ -6,3 +6,9 @@
     - name: Printing the variables from play
       ansible.builtin.debug:
        msg: "This is the value of {{ ENV }} and the team_lead is {{ TEAMLEAD }} of the value is {{ A }}"
+
+    - name: Printing the variables from local variable
+      ansible.builtin.debug:
+       msg: "This is the value of {{ URL }}"
+       vars:
+        URL: https://google.com
