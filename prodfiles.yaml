@@ -1,3 +1,3 @@
-ENV: dev
-A: 3000
+ENV: prd
+A: 1000
 TEAMLEAD: RAJU
