@@ -5,5 +5,5 @@
   tasks: 
    - name: printing the variables from play
      ansible.builtin.debug:
-      msg: "This is the value of {{ ENV }} and the lead_team is {{ LEADTEAM }} od the value is {{ A }}
+      msg: "This is the value of {{ ENV }} and the lead_team is {{ LEADTEAM }} of the value is {{ A }}
 
