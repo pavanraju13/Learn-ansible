@@ -3,5 +3,5 @@
   tasks: 
    - name: copying the content
      ansible.builtin.copy:
-      src: /home/ec2-user/Learn-ansible/08-copy.yaml
+      src: /home/ec2-user/Learn-ansible/nginx.conf
       dest: /home/ec2-user/
