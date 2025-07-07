@@ -7,19 +7,19 @@
      state: present
      tags: frontend
 
-   - name: installing the frontend
+   - name: installing the backend
      ansible.builtin.package:
      name: nodejs
      state: present
      tags: backend
 
-   - name: installing the frontend
+   - name: installing the database
      ansible.builtin.package:
      name: mysql
      state: present
      tags: database
 
-   - name: installing the frontend
+   - name: uninstall the nginx
      ansible.builtin.package:
      name: nginx
      state: absent
