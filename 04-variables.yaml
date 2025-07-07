@@ -9,6 +9,6 @@
 
    - name: printing the local variable
      ansible.builtin.debug:
-      msg: "This is a local variable {{ url }}"
-      url: https://www.localhost1.com
+      msg: "This is a local variable {{ link }}"
+      link: https://www.localhost1.com
       
