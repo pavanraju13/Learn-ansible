@@ -1,5 +1,6 @@
 - name: play1 of gathering facts
   hosts: all
+  gather_facts: no
   tasks:
    - name: Display of hostname and os
      ansible.builtin.debug:
