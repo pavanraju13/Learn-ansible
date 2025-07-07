@@ -3,5 +3,11 @@
   tasks: 
    - name: check python is Java or not
      ansible.builtin.shell: ps -ef | grep Java  | grep -v grep
+     ignore_errors: yes
 
+   - name: printing a message
+     ansible.builtin.debug:
+     msg: "hello world"
+     
   
+   
