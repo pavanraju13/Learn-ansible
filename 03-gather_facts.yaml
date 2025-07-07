@@ -2,6 +2,5 @@
   hosts: all
   tasks: 
    - name: gather the facts
-     ansible.builtin.gather_facts:
+     ansible.builtin.debug:
      msg: "These are the properities of the manage node machines"
-     
