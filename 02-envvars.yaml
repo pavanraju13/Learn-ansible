@@ -1,5 +1,5 @@
 - name: Printing the content
-  hosts: all
+  hosts: prod
   vars_files:
     - "{{ ENV }}files.yaml"
   tasks:
