@@ -3,5 +3,5 @@
   tasks: 
    - name: copying the content
      ansible.builtin.copy:
-      src: /home/ec2-user/Learn-ansible
+      src: /home/ec2-user/Learn-ansible/08-copy.yaml
       dest: /home/ec2-user/
