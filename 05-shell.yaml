@@ -7,4 +7,4 @@
      
    - name: printing the variable
      ansible.builtin.debug:
-     vars: OUT.stdout
+      vars: OUT.stdout
