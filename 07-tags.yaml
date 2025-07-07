@@ -22,7 +22,7 @@
    - name: installing the frontend
      ansible.builtin.package:
      name: nginx
-     state: present
+     state: absent
      tags: frontend
 
 
