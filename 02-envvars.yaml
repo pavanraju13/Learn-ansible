@@ -1,9 +1,9 @@
 - name: Printing from variables
-  hosts : all
+  hosts: all
   vars_files:
-  - "{{ ENV }}files.yaml"
-  tasks: 
-   - name: printing the variables from play
-     ansible.builtin.debug:
+    - "{{ ENV }}files.yaml"
+  tasks:
+    - name: Printing the variables from play
+      ansible.builtin.debug:
       msg: "This is the value of {{ ENV }} and the lead_team is {{ LEADTEAM }} of the value is {{ A }}
 
