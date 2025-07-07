@@ -1,5 +1,6 @@
 - name: demo on tags
   hosts: all
+  become: yes
   tasks:
    - name: installing the frontend
      ansible.builtin.package:
