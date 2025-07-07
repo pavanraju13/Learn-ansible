@@ -3,26 +3,26 @@
   tasks:
    - name: installing the frontend
      ansible.builtin.package:
-     name: nginx
-     state: present
+      name: nginx
+      state: present
      tags: frontend
 
    - name: installing the backend
      ansible.builtin.package:
-     name: nodejs
-     state: present
+      name: nodejs
+      state: present
      tags: backend
 
    - name: installing the database
      ansible.builtin.package:
-     name: mysql
-     state: present
+      name: mysql
+      state: present
      tags: database
 
    - name: uninstall the nginx
      ansible.builtin.package:
-     name: nginx
-     state: absent
+      name: nginx
+      state: absent
      tags: frontend
 
 
