@@ -1,7 +1,7 @@
 - name: Printing from variables
   hosts : all
   vars_files:
-     {{ ENV }}files.yaml
+     "{{ ENV }}"files.yaml
   tasks: 
    - name: printing the variables from play
      ansible.builtin.debug:
