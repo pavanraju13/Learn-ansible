@@ -4,3 +4,7 @@
    - name: task1 of shell 
      ansible.builtin.shell: uptime
      register: OUT
+     
+   - name: printing the variable
+     ansible.builtin.debug:
+     vars: OUT.stdout
