@@ -1,0 +1,7 @@
+- name: copying the files
+  hosts: all
+  tasks: 
+   - name: copying the content
+     ansible.builtin.copy:
+      src: /home/ec2-user/Learn-ansible
+      dest: /home/ec2-user/
