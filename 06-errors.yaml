@@ -1,0 +1,9 @@
+- name: demo on using errors
+  hosts: all
+  tasks: 
+   - name: Task1 of errors play
+     ansible.builtin.shell: ps -ef | grep python | grep -v grep
+
+   - name: Task2 of play1
+     ansible.builtin.shell: ps -ef
+     

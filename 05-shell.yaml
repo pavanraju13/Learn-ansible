@@ -9,4 +9,6 @@
      ansible.builtin.debug:
       msg: "This is the uptime of the servers {{ OUT.stdout }}"
       vars: OUT.stdout
+
+      
      
