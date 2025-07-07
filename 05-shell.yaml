@@ -7,4 +7,5 @@
      
    - name: printing the variable
      ansible.builtin.debug:
-      vars: OUT.stdout
+      msg: "This is the uptime of the servers {{ OUT.stdout }}"
+     
