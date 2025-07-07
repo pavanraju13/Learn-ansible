@@ -6,4 +6,9 @@
    - name: printing the play variable
      ansible.builtin.debug:
       msg: "This is a play variable {{ url }}"
+
+   - name: printing the local variable
+     ansible.builtin.debug:
+      msg: "This is a local variable {{ url }}"
+      url: https://www.localhost1.com
       
