@@ -1,7 +1,7 @@
 - name: demo on using errors
   hosts: all
   tasks: 
-   - name: check python is present or not
-     ansible.builtin.shell: ps -ef | grep python | grep -v grep
+   - name: check python is Java or not
+     ansible.builtin.shell: ps -ef | grep Java  | grep -v grep
 
   
