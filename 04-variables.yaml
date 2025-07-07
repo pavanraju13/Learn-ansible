@@ -1,0 +1,9 @@
+- name: variables test
+  hosts: all
+  vars:
+   url: https://www.localhost.com
+  tasks:
+   - name: printing the play variable
+     ansible.builtin.debug:
+      msg: "This is a play variable {{ url }}"
+      
