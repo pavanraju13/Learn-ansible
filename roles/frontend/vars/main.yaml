@@ -1,3 +1,4 @@
 component: "frontend"
 url: https://stan-robotshop.s3.amazonaws.com/frontend-v3.zip
 component_path: /usr/share/nginx/html
+conf: /etc/nginx/roboshop.conf

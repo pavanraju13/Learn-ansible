@@ -17,6 +17,11 @@
    dest: "{{ component_path }}"
    remote_src: yes
 
+- name: copying the proxy file
+  ansible.builtin.copy:
+   src: roboshop.conf
+   dest: "{{ conf }}"
+
 - name: Restarting the {{ component }} service
   ansible.builtin.service:
    name: nginx
