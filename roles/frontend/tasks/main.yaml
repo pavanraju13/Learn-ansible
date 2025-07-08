@@ -25,5 +25,5 @@
 - name: Restarting the {{ component }} service
   ansible.builtin.service:
    name: nginx
-   state: restart
+   state: restarted
 
