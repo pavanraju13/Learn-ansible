@@ -9,6 +9,11 @@
 - name: deleting the html directory for {{ component }} 
   ansible.builtin.file:
    path: "{{ component_path }}"
+   state: absent
+
+- name: deleting the html directory for {{ component }} 
+  ansible.builtin.file:
+   path: "{{ component_path }}"
    state: directory
 
 - name: downloading the {{ component }} code
