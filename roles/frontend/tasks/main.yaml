@@ -1,0 +1,24 @@
+- name: configuring the hostname
+  ansible.builtin.shell: set-hostname {{ component }}
+
+- name: Installing nginx
+  ansible.builtin.package: 
+   name: nginx
+   state: present
+
+- name: deleting the html directory for {{ component }} 
+  ansible.builtin.file:
+   src: {{ component_path }}
+   state: directory
+
+- name: downloading the {{ component }} code
+  ansible.builtin.unarchive:
+   src: {{ url }}
+   dest: {{ component_path }}
+   remote_src: yes
+
+- name: Restarting the {{ component }} service
+  ansible.builtin.service:
+   name: nginx
+   state: restart
+
