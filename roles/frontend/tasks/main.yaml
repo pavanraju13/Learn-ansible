@@ -8,7 +8,7 @@
 
 - name: deleting the html directory for {{ component }} 
   ansible.builtin.file:
-   src: "{{ component_path }}"
+   path: "{{ component_path }}"
    state: directory
 
 - name: downloading the {{ component }} code
