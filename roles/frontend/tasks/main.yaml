@@ -8,13 +8,13 @@
 
 - name: deleting the html directory for {{ component }} 
   ansible.builtin.file:
-   src: {{ component_path }}
+   src: "{{ component_path }}"
    state: directory
 
 - name: downloading the {{ component }} code
   ansible.builtin.unarchive:
-   src: {{ url }}
-   dest: {{ component_path }}
+   src: "{{ url }}"
+   dest: "{{ component_path }}"
    remote_src: yes
 
 - name: Restarting the {{ component }} service
