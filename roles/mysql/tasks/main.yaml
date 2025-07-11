@@ -7,7 +7,7 @@
    name: "{{ component }}"
    state: present
 
-- name: Starting {{ compomnent }} service
+- name: Starting {{ component }} service
   ansible.builtin.service:
     name: mysqld
     state: started
