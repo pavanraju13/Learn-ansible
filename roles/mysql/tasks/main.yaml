@@ -7,11 +7,11 @@
    name: "{{ component }}"
    state: present
 
-- name: Starting {{ component }}
+- name: Starting {{ compomnent }} service
   ansible.builtin.service:
-   name: mysqld
-   state: started
-   enabled: yes
+    name: mysqld
+    state: started
+    enabled: yes 
 
 - name: setting the password for {{ component }}
   ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
