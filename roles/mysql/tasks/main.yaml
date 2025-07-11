@@ -4,7 +4,7 @@
 
 - name: Installing {{ component }}
   ansible.builtin.package:
-   name: "{{ component }}"
+   name: mysql-server
    state: present
 
 - name: Starting {{ component }} service
