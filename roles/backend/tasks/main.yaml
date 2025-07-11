@@ -33,7 +33,7 @@
   ansible.builtin.unarchive: 
    src: "{{ url }}"
    dest: "{{ app_dir }}"
-   remote: yes
+   remote_src: yes
 
 - name: installing artifacts
   ansible.builtin.npm: 
