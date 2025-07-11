@@ -11,7 +11,7 @@
    path: "{{ component_path }}"
    state: absent
 
-- name: deleting the html directory for {{ component }} 
+- name: creating a directory for {{ component }} 
   ansible.builtin.file:
    path: "{{ component_path }}"
    state: directory

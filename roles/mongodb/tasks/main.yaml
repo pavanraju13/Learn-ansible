@@ -1,0 +1,18 @@
+- name: configuring the {{ component }} hostname
+  ansible.builtin.shell: set-hostname {{ component }}
+
+
+- name: Installing {{ component }}
+  ansible.builtin.package:
+   name: "{{ component }}"
+   state: present
+
+- name: Starting {{ component }}
+  ansible.builtin.service:
+   name: "{{ component }}"
+   state: started
+   enable: yes
+
+- name: setting the password for {{ component }}
+  ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
+  
