@@ -1,0 +1,76 @@
+- name: setting the {{ component }}
+  ansible.builtin.shell: set-hostname {{ component }}
+
+- name: Disabling the default nodejs for {{ component }}
+  ansible.builtin.shell: dnf module disable nodejs -y
+
+- name: Enabling the module nodejs for {{ component }}
+  ansible.builtin.shell: dnf module enable nodejs:20 -y
+
+- name: Installing nodejs for {{ component }}
+  ansible.builtin.package: 
+   name: nodejs
+   state: present
+
+
+- name: creating a {{ app_user }}
+  ansible.builtin.user:
+   name: "{{ app_user }}"
+
+
+- name: deleting the application directory
+  ansible.builtin.file:
+   name: "{{ app_dir }}"
+   state: absent
+
+
+- name: creating the directory
+  ansible.builtin.file:
+   name: "{{ app_dir }}"
+   state: directory
+
+- name: downloading and extracting the {{ component }} code
+  ansible.builtin.unarchive: 
+   src: "{{ url }}"
+   dest: "{{ app_dir }}"
+   remote: yes
+
+- name: installing artifacts
+  ansible.builtin.npm: 
+   path: "{{ app_dir }}"
+
+- name: setting up systemd service
+  ansible.builtin.copy: 
+   src: backend.service
+   dest: "{{ service }}"
+
+- name: reload deamon
+  ansible.builtin.shell: systemctl daemon-reload
+
+- name: restarting the {{ component }}
+  ansible.builtin.service: 
+   name: "{{ component }}"
+   state: restarted
+   enabled: yes
+  
+- name: Installing mysql client
+  ansible.builtin.dnf:
+    name: mysql-server
+    state: present
+
+- name: Installing pre-req package for schema injection
+  ansible.builtin.pip:
+    name: 
+      - PyMySQL
+      - cryptography
+    executable: pip3.11
+- name: loading the schema
+  ansible.builtin.shell: mysql -h 172.31.93.158 -uroot -pExpenseApp@1 < /app/schema/backend.sql
+
+- name: Restarting the {{ component }} service
+  ansible.builtin.service:
+   name: "{{ component }}"
+   state: restarted
+
+
+

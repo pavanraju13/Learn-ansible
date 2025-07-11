@@ -1,0 +1,5 @@
+component: "backend"
+app_user: expense
+app_dir: /app
+url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
+service: /etc/systemd/system/backend.service
