@@ -1,5 +1,5 @@
-- name: configuring the {{ component }} hostname
-  ansible.builtin.shell: set-hostname {{ component }}
+- name: configuring the {{ component }}.{{ env }}.clouddevops.life hostname
+  ansible.builtin.shell: set-hostname {{ component }}.{{ env }}
 
 
 - name: Installing {{ component }}
