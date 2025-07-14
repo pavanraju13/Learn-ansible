@@ -23,7 +23,7 @@
    remote_src: yes
 
 - name: copying the proxy file
-  ansible.builtin.copy:
+  ansible.builtin.templates:
    src: roboshop.conf
    dest: "{{ conf }}"
 
