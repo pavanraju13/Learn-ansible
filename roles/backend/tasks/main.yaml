@@ -41,7 +41,7 @@
 
 - name: setting up systemd service
   ansible.builtin.template: 
-   src: backend.service
+   src: backend.service.j2
    dest: "{{ service }}"
 
 - name: reload deamon
