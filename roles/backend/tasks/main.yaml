@@ -40,7 +40,7 @@
    path: "{{ app_dir }}"
 
 - name: setting up systemd service
-  ansible.builtin.templates: 
+  ansible.builtin.template: 
    src: backend.service
    dest: "{{ service }}"
 
