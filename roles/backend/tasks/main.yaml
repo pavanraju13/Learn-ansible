@@ -62,8 +62,15 @@
       - PyMySQL
       - cryptography
     executable: pip3.11
-- name: loading the schema
-  ansible.builtin.shell: mysql -h mysql.dev.clouddevops.life -uroot -pExpenseApp@1 < /app/schema/backend.sql
+    
+- name: Schema Injection
+  community.mysql.mysql_db:
+    name: all
+    state: import
+    target: /app/schema/backend.sql 
+    login_host: mysql-{{ env }}.clouding-app.shop
+    login_user: root
+    login_password: ExpenseApp@1
 
 - name: Restarting the {{ component }} service
   ansible.builtin.service:
