@@ -68,7 +68,7 @@
     name: all
     state: import
     target: /app/schema/backend.sql 
-    login_host: mysql-{{ env }}.clouddevops.life
+    login_host: mysql.{{ env }}.clouddevops.life
     login_user: root
     login_password: ExpenseApp@1
 
