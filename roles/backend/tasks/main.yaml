@@ -62,13 +62,13 @@
       - PyMySQL
       - cryptography
     executable: pip3.11
-    
+
 - name: Schema Injection
   community.mysql.mysql_db:
     name: all
     state: import
     target: /app/schema/backend.sql 
-    login_host: mysql-{{ env }}.clouding-app.shop
+    login_host: mysql-{{ env }}.clouddevops.life
     login_user: root
     login_password: ExpenseApp@1
 
