@@ -21,7 +21,7 @@
 
 - name: copying the proxy file
   ansible.builtin.template:
-    src: roboshop.conf.j2
+    src: roboshop.conf
     dest: /etc/nginx/default.d/expense.conf
 
 - name: Restarting the {{ component }} service
